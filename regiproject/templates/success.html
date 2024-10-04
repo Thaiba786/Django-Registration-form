@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <style>
+        /* Dark to Light Gradient with Shadow */
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #2c3e50, #4e5a67, #7f8c8d, #ecf0f1);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Animated Gradient Keyframes */
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Centered Container with Drop Shadow */
+        .container {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 70%;
+            max-width: 600px;
+            color: #ecf0f1;
+        }
+
+        /* Glowing Text with Stylish Font */
+        h1 {
+            font-size: 2.5em;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: -webkit-linear-gradient(#f39c12, #f1c40f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        /* Text Glow Effect */
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #f39c12, 0 0 20px #f1c40f, 0 0 30px #f39c12;
+            }
+            to {
+                text-shadow: 0 0 20px #f1c40f, 0 0 40px #f39c12, 0 0 50px #f1c40f;
+            }
+        }
+
+        /* Paragraph with Soft Fade-in Animation */
+        p {
+            font-size: 1.6em;
+            color: #bdc3c7;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            animation: fadeIn 2s ease;
+        }
+
+        /* Fade-in Keyframes */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Button with 3D Effect and Hover Animation */
+        .btn {
+            margin-top: 25px;
+            padding: 12px 30px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2ecc71;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome {{ username }},</h1>
+        <p>You have logged in successfully :)</p>
+    
+    </div>
+</body>
+</html>
